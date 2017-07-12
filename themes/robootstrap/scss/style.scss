@@ -11,6 +11,18 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body, html {
+  height: 100%;
+}
+
+body.navbar-is-fixed-top {
+  margin-top: 0;
+  .navbar {
+    background: transparent;
+    border: none;
+  }
+}
+
 h2 {
   text-align: center;
 }
@@ -36,10 +48,36 @@ h2 {
   }
 
   .main-container  {
+    min-height: 100%;
+
     .col-sm-12 {
 	     padding: 0;
      }
    }
+}
+
+#frontcover {
+  min-height: 100%;
+  -webkit-background-size: cover;
+  background-color: $lightBgColor;
+  background-image: url(/themes/robootstrap/imgs/juan-front-cover.jpg);
+  background-size: cover;
+  
+  img {
+    height: 100%;
+    position: absolute;
+  }
+
+  #frontcard {
+    position: absolute;
+    display: block;
+    background: $darkBgColor;
+    color: $whiteColor;
+    padding: 2em;
+    top: 50%;
+    right: 15%;
+  }
+
 }
 
 /* Since positioning the image, we need to help out the caption */
