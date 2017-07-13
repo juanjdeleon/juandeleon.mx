@@ -4,11 +4,17 @@
 @import 'vars';
 
 /* Fonts */
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,500';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab';
 
 /* General styles */
 * {
   font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto Slab', serif;
 }
 
 body, html {
@@ -31,14 +37,14 @@ h2 {
 	display: none;
 }
 
-.region-content {
-  font-size: 2em;
-  font-weight: 300;
-  padding: 1em 3em;
-}
-
 .navbar {
   margin-bottom: 0;
+}
+
+.btn {
+    text-transform: uppercase;
+    padding: 1em 2em;
+    border-radius: 0;
 }
 
 /* Front */
@@ -49,10 +55,6 @@ h2 {
 
   .main-container  {
     min-height: 100%;
-
-    .col-sm-12 {
-	     padding: 0;
-     }
    }
 }
 
@@ -63,21 +65,80 @@ h2 {
   background-image: url(/themes/robootstrap/imgs/juan-front-cover.jpg);
   background-size: cover;
   
-  img {
-    height: 100%;
-    position: absolute;
-  }
-
   #frontcard {
     position: absolute;
     display: block;
+    text-align: center;
     background: $darkBgColor;
     color: $whiteColor;
     padding: 2em;
     top: 50%;
     right: 15%;
+    
+    .btn {
+	    color: white;
+	    background: transparent;
+    }
   }
 
+}
+
+#block-mystory {
+	#mystory-text {
+		padding: 5em;
+	}
+	
+	.equal {
+		@media (min-width: 992px) {
+			display: flex;
+		}
+		.equal-panel {
+			display: flex;
+			align-items: stretch;
+			margin-bottom: 1em;
+		}
+		
+		.story-block {
+			background: $whiteColor;
+			width: 100%;
+			border: 0;
+			
+			.panel-heading {
+				background: $whiteColor;
+				border: 0;
+				
+				h3 {
+					text-align: center;
+					color: $darkBgColor;
+				}
+			}
+			
+		}
+	}
+	
+	.centered {
+		text-align: center;
+		margin: 2em;
+	}
+}
+
+.view-frontpage {
+	.views-row {
+		display: inline-block;
+		
+		.views-field-field-image {
+			float: left;
+			padding: 1em;
+		}
+		
+		.views-field-title {
+			a {
+				font-family: $headerFont;
+				font-size: 24px;
+				color: $logoColor;
+			}
+		}
+	}
 }
 
 /* Since positioning the image, we need to help out the caption */
@@ -88,7 +149,8 @@ h2 {
 /* Parallax blocks */
 #block-homeblock,
 #block-musicblockparallax,
-#block-codeblockparallax
+#block-codeblockparallax,
+#block-parallaxplaywithlinesofcode
  {
   width: 100%;
   height: 480px;
@@ -113,6 +175,17 @@ h2 {
     display: inline;
     font-size: 3em;
 	  padding: 0.2em;
+  }
+}
+
+#block-parallaxplaywithlinesofcode {
+  background: url(/themes/robootstrap/imgs/parallax-code.jpg) no-repeat center center fixed;
+  height: 200px;
+  
+  .field--name-body {
+	  position: relative;
+	  text-align: center;
+	  margin-top: 80px;
   }
 }
 
