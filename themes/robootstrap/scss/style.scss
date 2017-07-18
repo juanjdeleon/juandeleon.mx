@@ -29,6 +29,10 @@ body.navbar-is-fixed-top {
   }
 }
 
+.col-sm-12 {
+	padding: 0;
+}
+
 h2 {
   text-align: center;
 }
@@ -89,6 +93,8 @@ h2 {
 	}
 	
 	.equal {
+		padding: 15px;
+		
 		@media (min-width: 992px) {
 			display: flex;
 		}
@@ -180,6 +186,7 @@ h2 {
 
 #block-parallaxplaywithlinesofcode {
   background: url(/themes/robootstrap/imgs/parallax-code.jpg) no-repeat center center fixed;
+  background-size: cover;
   height: 200px;
   
   .field--name-body {
