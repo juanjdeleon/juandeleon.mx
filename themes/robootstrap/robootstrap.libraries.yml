@@ -3,3 +3,6 @@ global-styling:
     theme:
       css/style.css: {}
       css/font-awesome.min.css: {}
+transparent-bar:
+  js:
+    js/transparent-bar.js: {}

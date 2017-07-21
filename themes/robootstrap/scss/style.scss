@@ -21,14 +21,6 @@ body, html {
   height: 100%;
 }
 
-body.navbar-is-fixed-top {
-  margin-top: 0;
-  .navbar {
-    background: transparent;
-    border: none;
-  }
-}
-
 .col-sm-12 {
 	padding: 0;
 }
@@ -60,6 +52,17 @@ h2 {
   .main-container  {
     min-height: 100%;
    }
+
+  .navbar-fixed-top {
+    margin-top: 0;
+    background: transparent;
+    border: none;
+  }
+  
+  .navbar-solid-background {
+	  background: #fff;
+  }
+
 }
 
 #frontcover {

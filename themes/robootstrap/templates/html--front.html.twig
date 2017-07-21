@@ -61,6 +61,7 @@ theme.has_glyphicons ? 'has-glyphicons',
         <title>{{ head_title|safe_join(' | ') }}</title>
         <css-placeholder token="{{ placeholder_token|raw }}">
             <js-placeholder token="{{ placeholder_token|raw }}">
+        {{ attach_library('robootstrap/transparent-bar') }}
 </head>
 <body{{ attributes.addClass(body_classes) }}>
     <div id="frontcover">
