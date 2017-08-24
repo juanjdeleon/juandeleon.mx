@@ -13,12 +13,20 @@
   line-height: 24px;
 }
 
+a {
+	color: $darkBgColor;
+}
+
 h1, h2, h3, h4 {
   font-family: 'Roboto Slab', serif;
 }
 
 body, html {
   height: 100%;
+}
+
+body.navbar-is-fixed-top {
+	margin-top: 0;
 }
 
 .col-sm-12 {
@@ -29,39 +37,119 @@ h2 {
   text-align: center;
 }
 
+.btn {
+    text-transform: uppercase;
+    padding: 1em 2em;
+    border-color: $darkBgColor;
+    border-radius: 0;
+    color: $darkBgColor;
+    
+    &:hover {
+	    background: $darkBgColor;
+	    color: #fff;
+	    text-decoration: none;
+    }
+}
+
+.well {
+	background: $lightBgColor;
+	border: 0;
+}
+
+/* Navbar */
 .navbar-brand {
 	display: none;
 }
 
 .navbar {
-  margin-bottom: 0;
+	margin-bottom: 0;
+	transition: background 2s;
+	-webkit-transition: background 0.3s;
+
+	.menu {
+		float: right;
+
+		a {
+			font-family: $headerFont;
+			color: $logoColor !important;
+		}
+	}
 }
 
-.btn {
-    text-transform: uppercase;
-    padding: 1em 2em;
-    border-radius: 0;
+/* Footer */
+footer {
+	background: $whiteColor;
+	border-top: 0;
+}
+
+#block-socialnetworks {
+	width: 50%;
+	float: left;
+}
+
+#block-languageswitcher {
+	width: 50%;
+	float: right;
+	
+	ul {
+		list-style-type: none;
+		text-align: center;
+		margin-top: 1.5em;
+		
+		li {
+			display: inline;
+			margin: 0.5em;
+		}
+		
+		li.es a {
+			background: url(/themes/robootstrap/imgs/MX.png) 12px center no-repeat;
+			
+			&:hover {
+				color: #fff;
+				background-color: $darkBgColor;
+				text-decoration: none;
+			}
+		}
+
+		li.en a {
+			background: url(/themes/robootstrap/imgs/GB.png) 12px center no-repeat;
+
+			&:hover {
+				color: #fff;
+				background-color: $darkBgColor;
+				text-decoration: none;
+			}
+		}
+	}
+	a {
+		display: inline-block;
+		padding: 10px 15px 10px 40px;
+		text-align: center;
+		border: solid 1px $darkBgColor;
+	}
 }
 
 /* Front */
 .path-frontpage {
-  .page-header {
-    display: none;
-  }
+	.page-header {
+		display: none;
+	}
 
-  .main-container  {
-    min-height: 100%;
-   }
+	.main-container  {
+		min-height: 100%;
+	}
 
-  .navbar-fixed-top {
-    margin-top: 0;
-    background: transparent;
-    border: none;
-  }
+   .navbar-fixed-top {
+		margin-top: 0;
+		background: transparent;
+		border: none;
+		position: absolute;
+	}
   
-  .navbar-solid-background {
-	  background: #fff;
-  }
+	.navbar-solid-background {
+		background: #fff;
+		position: fixed;
+	}
 
 }
 
@@ -83,8 +171,14 @@ h2 {
     right: 15%;
     
     .btn {
-	    color: white;
+	    color: $whiteColor;
 	    background: transparent;
+	    border-color: $whiteColor;
+	    
+	    &:hover {
+		    color: white;
+		    border-color: white;
+	    }
     }
   }
 
@@ -105,6 +199,7 @@ h2 {
 			display: flex;
 			align-items: stretch;
 			margin-bottom: 1em;
+			padding: 15px;
 		}
 		
 		.story-block {
@@ -134,19 +229,93 @@ h2 {
 .view-frontpage {
 	.views-row {
 		display: inline-block;
+		padding: 15px;
 		
 		.views-field-field-image {
-			float: left;
 			padding: 1em;
+			
+			img {
+				margin: auto;
+			}
 		}
 		
 		.views-field-title {
+			clear: both;
+			text-align: center;
+			
 			a {
 				font-family: $headerFont;
 				font-size: 24px;
 				color: $logoColor;
 			}
 		}
+		
+		.views-field-path {
+			margin: 1em;
+			text-align: center;
+			
+			a {
+				background: $darkBgColor;
+				color: $whiteColor;
+				padding: 1em;
+				font-size: 0.8em;
+				text-transform: uppercase;
+			}
+		}
+	}
+	
+	.view-footer {
+	    text-align: center;
+	    display: inline-block;
+	    width: 100%;
+	}
+}
+
+/* Blog */
+.path-blog {
+	margin-top: 65px !important;
+	padding: 15px;
+	
+	.view-blog {
+		padding: 15px;
+		
+		.views-row {
+			display: inline-block;
+			clear: both;
+			padding-bottom: 2em;
+			
+			.views-field-field-image {
+				display: inline-block;
+				float: left;
+				padding-right: 2em;
+			}
+			
+			.views-field-title a {
+				font-family: Roboto Slab;
+				font-size: 2em;
+				color: $logoColor;
+			}
+			
+			.views-field-created {
+				font-style: italic;
+				color: $highlightColor;
+			}
+			
+			.views-field-body {
+				display: flex;
+			}
+		}
+		
+		.feed-icons {
+			text-align: center;
+			
+			.feed-icon {
+			    color: white;
+			    background: $logoColor;
+			    padding: 1em;
+			}
+		}
+		
 	}
 }
 
@@ -302,8 +471,12 @@ h2 {
 }
 
 .social-networks {
-  font-size: 3em;
-  text-align: center;
+	i {
+		font-size: 3em;
+	}
+	letter-spacing: 0.8em;
+	margin: 1.5em;
+	text-align: center;
 }
 
 @media (min-width: $mobile-width) and (max-width: $tablet-width - 1px) {
