@@ -3,6 +3,9 @@ global-styling:
     theme:
       css/style.css: {}
       css/font-awesome.min.css: {}
-transparent-bar:
+jdeleon:
   js:
-    js/transparent-bar.js: {}
+    js/jdeleon.js: {}
+scrollreveal:
+  js:
+    js/scrollreveal.min.js: {}
