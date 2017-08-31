@@ -1,0 +1,22 @@
+uuid: 19ef44a1-f39a-4b45-825c-b16b0056cf94
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - robootstrap
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: robootstrap_help
+theme: robootstrap
+region: content
+weight: -12
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

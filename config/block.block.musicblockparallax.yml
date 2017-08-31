@@ -1,0 +1,31 @@
+uuid: c9be90e1-ac75-4714-ab9e-b7c1043c4c14
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5fcc9819-a50c-47f6-80ff-311c922b5b80'
+  module:
+    - block_content
+    - system
+  theme:
+    - robootstrap
+id: musicblockparallax
+theme: robootstrap
+region: header
+weight: -11
+provider: null
+plugin: 'block_content:5fcc9819-a50c-47f6-80ff-311c922b5b80'
+settings:
+  id: 'block_content:5fcc9819-a50c-47f6-80ff-311c922b5b80'
+  label: 'Music block parallax'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /music
+    negate: false
+    context_mapping: {  }

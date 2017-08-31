@@ -1,0 +1,21 @@
+uuid: 44a39558-1b05-4183-a4db-7bf79e90a8b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_synopsis
+    - node.type.project
+  module:
+    - text
+id: node.project.field_synopsis
+field_name: field_synopsis
+entity_type: node
+bundle: project
+label: Synopsis
+description: 'Short explanation of the project.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

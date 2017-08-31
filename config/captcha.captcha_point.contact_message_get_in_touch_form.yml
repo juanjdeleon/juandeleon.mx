@@ -1,0 +1,7 @@
+uuid: c796c2db-476c-48cf-9608-a42b813741c9
+langcode: en
+status: true
+dependencies: {  }
+formId: contact_message_get_in_touch_form
+captchaType: recaptcha/reCAPTCHA
+label: contact_message_get_in_touch_form

@@ -1,0 +1,20 @@
+uuid: d741e7ef-a26c-46ee-a853-4aaba75c09ce
+langcode: es
+status: true
+dependencies:
+  theme:
+    - robootstrap
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: robootstrap_page_title
+theme: robootstrap
+region: content
+weight: -10
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: be0d4f77-f7b7-4a7d-a4ad-814d1f43b3b7
+langcode: es
+status: true
+dependencies:
+  theme:
+    - robootstrap
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: robootstrap_local_tasks
+theme: robootstrap
+region: content
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

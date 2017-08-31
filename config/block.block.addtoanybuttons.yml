@@ -1,0 +1,42 @@
+uuid: 3b2a0c97-c844-4e4e-b533-917d444b95ce
+langcode: es
+status: true
+dependencies:
+  module:
+    - addtoany
+    - ctools
+    - node
+    - system
+  theme:
+    - robootstrap
+id: addtoanybuttons
+theme: robootstrap
+region: content
+weight: -11
+provider: null
+plugin: addtoany_block
+settings:
+  id: addtoany_block
+  label: 'AddToAny buttons'
+  provider: addtoany
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: ''
+    negate: true
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,39 @@
+uuid: 527884ed-87a3-4505-a878-ae4b6a4ea7d5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0dc31a80-8d01-4558-a472-dda1a008fc08'
+  module:
+    - block_content
+    - language
+    - system
+  theme:
+    - robootstrap
+id: mystory
+theme: robootstrap
+region: header
+weight: -9
+provider: null
+plugin: 'block_content:0dc31a80-8d01-4558-a472-dda1a008fc08'
+settings:
+  id: 'block_content:0dc31a80-8d01-4558-a472-dda1a008fc08'
+  label: 'My Story'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  language:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

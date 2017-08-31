@@ -1,0 +1,17 @@
+uuid: 30762bab-f9ed-4bf2-972b-d483c211bb29
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Workplace
+type: workplace
+description: 'Places where I have worked.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,13 @@
+uuid: c152ad95-03be-40cb-9801-fc3144fd0d7c
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: MLin6S_PsJ7Oo480DxS46D46IM8tqFkkWOLyH7TGByI
+id: comment_unpublish_action
+label: 'Rerirar comentario de la publicación'
+type: comment
+plugin: comment_unpublish_action
+configuration: {  }

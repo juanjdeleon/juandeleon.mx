@@ -1,0 +1,20 @@
+uuid: e1694660-1317-44af-a9c3-5aaff5be5544
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_synopsis
+field_name: field_synopsis
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

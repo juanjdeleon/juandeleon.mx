@@ -1,0 +1,30 @@
+uuid: 647b5521-264e-4bf8-9330-9fe83e23e10c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.list_of_projects
+  module:
+    - system
+    - views
+  theme:
+    - robootstrap
+id: views_block__list_of_projects_block_2
+theme: robootstrap
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:list_of_projects-block_2'
+settings:
+  id: 'views_block:list_of_projects-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /code
+    negate: false
+    context_mapping: {  }

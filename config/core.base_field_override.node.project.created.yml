@@ -1,0 +1,18 @@
+uuid: bdbd11b9-9800-40ec-98bd-cfdb2f4f4727
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node.project.created
+field_name: created
+entity_type: node
+bundle: project
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

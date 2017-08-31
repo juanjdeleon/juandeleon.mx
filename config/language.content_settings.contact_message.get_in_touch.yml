@@ -1,0 +1,11 @@
+uuid: c15f3949-07ea-4c84-bd8a-132c71acc1e6
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.get_in_touch
+id: contact_message.get_in_touch
+target_entity_type_id: contact_message
+target_bundle: get_in_touch
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,20 @@
+uuid: f17b28aa-b0ef-4f87-acb9-f3b54c11b102
+langcode: es
+status: true
+dependencies:
+  theme:
+    - robootstrap
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: robootstrap_local_actions
+theme: robootstrap
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: ac979b0c-a4fd-4671-a833-18726c2e8f62
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - robootstrap
+id: languageswitcher
+theme: robootstrap
+region: footer
+weight: -11
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: visible
+visibility: {  }

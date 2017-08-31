@@ -1,0 +1,23 @@
+uuid: cfa1fe99-5469-4c7d-a05f-e4a54926584b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enlace
+    - node.type.project
+  module:
+    - link
+id: node.project.field_enlace
+field_name: field_enlace
+entity_type: node
+bundle: project
+label: 'Watch more'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

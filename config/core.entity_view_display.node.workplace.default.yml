@@ -1,0 +1,28 @@
+uuid: 779a6b95-2182-4a96-87b4-ff22e335c295
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.workplace.body
+    - node.type.workplace
+  module:
+    - text
+    - user
+id: node.workplace.default
+targetEntityType: node
+bundle: workplace
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  langcode: true

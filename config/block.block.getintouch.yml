@@ -1,0 +1,31 @@
+uuid: e73cae64-0eef-48b7-b342-8364b7ce47a9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8b6925b1-a8ef-4654-99e6-a3915fc970b3'
+  module:
+    - block_content
+    - system
+  theme:
+    - robootstrap
+id: getintouch
+theme: robootstrap
+region: sidebar_second
+weight: -11
+provider: null
+plugin: 'block_content:8b6925b1-a8ef-4654-99e6-a3915fc970b3'
+settings:
+  id: 'block_content:8b6925b1-a8ef-4654-99e6-a3915fc970b3'
+  label: 'Get in touch'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/contact\r\n/contact/*"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,31 @@
+uuid: 42bfb29d-f145-4a22-8b52-192820ea061a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f481c992-fdc8-479b-94b1-a5848268915e'
+  module:
+    - block_content
+    - system
+  theme:
+    - robootstrap
+id: codeblockparallax
+theme: robootstrap
+region: header
+weight: -12
+provider: null
+plugin: 'block_content:f481c992-fdc8-479b-94b1-a5848268915e'
+settings:
+  id: 'block_content:f481c992-fdc8-479b-94b1-a5848268915e'
+  label: 'Code block parallax'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /code
+    negate: false
+    context_mapping: {  }

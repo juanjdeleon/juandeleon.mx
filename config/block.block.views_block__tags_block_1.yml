@@ -1,0 +1,30 @@
+uuid: 97043043-5d0f-4e73-bbea-1976d073b369
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.tags
+  module:
+    - system
+    - views
+  theme:
+    - robootstrap
+id: views_block__tags_block_1
+theme: robootstrap
+region: sidebar_second
+weight: -12
+provider: null
+plugin: 'views_block:tags-block_1'
+settings:
+  id: 'views_block:tags-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /blog
+    negate: false
+    context_mapping: {  }

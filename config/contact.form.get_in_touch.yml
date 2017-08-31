@@ -1,0 +1,12 @@
+uuid: 967b3ab3-ba8e-4291-87a3-8c1903613720
+langcode: en
+status: true
+dependencies: {  }
+id: get_in_touch
+label: 'Get in touch'
+recipients:
+  - hello@jdeleon.info
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

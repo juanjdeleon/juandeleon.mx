@@ -1,0 +1,30 @@
+uuid: 5232de55-e972-42f6-8101-11ff681d3f98
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.workplace.body
+    - node.type.workplace
+  module:
+    - text
+    - user
+id: node.workplace.teaser
+targetEntityType: node
+bundle: workplace
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  langcode: true

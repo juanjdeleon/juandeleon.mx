@@ -1,0 +1,34 @@
+uuid: 2f71905d-a50f-49bd-92ce-018344060183
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.slideshow.body
+    - field.field.node.slideshow.field_enlace
+    - field.field.node.slideshow.field_image
+    - node.type.slideshow
+  module:
+    - text
+    - user
+id: node.slideshow.teaser
+targetEntityType: node
+bundle: slideshow
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_enlace: true
+  field_image: true
+  langcode: true

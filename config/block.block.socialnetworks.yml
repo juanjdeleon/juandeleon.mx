@@ -1,0 +1,31 @@
+uuid: 6e634909-c48a-4b4d-94ca-79cf0a449a12
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:32102221-84a1-421f-b1a1-20796af8fdbe'
+  module:
+    - block_content
+    - system
+  theme:
+    - robootstrap
+id: socialnetworks
+theme: robootstrap
+region: footer
+weight: -12
+provider: null
+plugin: 'block_content:32102221-84a1-421f-b1a1-20796af8fdbe'
+settings:
+  id: 'block_content:32102221-84a1-421f-b1a1-20796af8fdbe'
+  label: 'Meet me online'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/contact\r\n/contact/*"
+    negate: true
+    context_mapping: {  }

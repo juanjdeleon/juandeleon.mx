@@ -1,0 +1,30 @@
+uuid: f3175912-491e-455d-82a1-f1063816772e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.list_of_projects
+  module:
+    - system
+    - views
+  theme:
+    - robootstrap
+id: views_block__list_of_projects_block_1
+theme: robootstrap
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:list_of_projects-block_1'
+settings:
+  id: 'views_block:list_of_projects-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /music
+    negate: false
+    context_mapping: {  }

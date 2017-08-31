@@ -1,0 +1,16 @@
+uuid: 987b590e-9a05-4514-a16e-2d0931ff8139
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.workplace
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.workplace
+target_entity_type_id: node
+target_bundle: workplace
+default_langcode: site_default
+language_alterable: false

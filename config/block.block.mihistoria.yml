@@ -1,0 +1,39 @@
+uuid: 2a7b16cb-a367-4e45-ade8-22b8db3b891d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:aa11077d-d926-47fb-9a39-244c43ed462d'
+  module:
+    - block_content
+    - language
+    - system
+  theme:
+    - robootstrap
+id: mihistoria
+theme: robootstrap
+region: header
+weight: -10
+provider: null
+plugin: 'block_content:aa11077d-d926-47fb-9a39-244c43ed462d'
+settings:
+  id: 'block_content:aa11077d-d926-47fb-9a39-244c43ed462d'
+  label: 'Mi Historia'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  language:
+    id: language
+    langcodes:
+      es: es
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

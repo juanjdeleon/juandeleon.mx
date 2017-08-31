@@ -1,0 +1,30 @@
+uuid: a3414ed3-d91f-4ef5-b9f4-2e8d966e3ca5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.resume
+  module:
+    - system
+    - views
+  theme:
+    - robootstrap
+id: views_block__resume_block_1
+theme: robootstrap
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:resume-block_1'
+settings:
+  id: 'views_block:resume-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /resume
+    negate: false
+    context_mapping: {  }
