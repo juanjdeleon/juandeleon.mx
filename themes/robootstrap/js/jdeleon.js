@@ -34,6 +34,18 @@ $(document).ready(function() {
 		sr.reveal('.btn-timeline', { duration: 800 });
 		sr.reveal('.view-frontpage');
 	}
+	
+	// ** Resume **
+	if ($('.view-resume').length) {
+		
+		$('.row-resume').hover(
+			function() {
+				$($(this).children('div.views-field.views-field-field-image')).toggle('slow');
+				$($(this).children('div.views-field.views-field-body')).toggle('slow');
+				$($(this).children('div.views-field.views-field-field-enlace')).toggle('slow');
+			});
+		
+	}
 
 });
 })(jQuery);

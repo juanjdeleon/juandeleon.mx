@@ -271,6 +271,46 @@ footer {
 	}
 }
 
+/* Resume */
+.view-id-resume {
+	background: $whiteColor;
+	margin: 15px;
+	
+	.views-row {
+		display: inline-block;
+		width: 100%;
+		padding: 1em 2em;
+		border-bottom: solid 1px $lightBgColor;
+		
+		&:hover {
+			background: $lightBgColor;
+		}
+	}
+	
+	.views-field-field-year {
+		float: left;
+		padding-right: 2em;
+		
+		i {
+			font-size: 36px;
+		}
+		
+		.year-number {
+			font-family: 'Roboto Slab';
+		}
+	}
+	
+	h4 {
+		color: $logoColor;
+	}
+	
+	.views-field-field-enlace,
+	.views-field-field-image,
+	.views-field-body {
+		display: none;
+	}
+}
+
 /* Blog */
 .path-blog {
 	margin-top: 65px !important;
