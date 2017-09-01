@@ -184,40 +184,26 @@ footer {
 
 }
 
+.story-block {
+	background: $whiteColor;
+	width: 100%;
+	border: 0;
+	
+	.panel-heading {
+		background: $whiteColor;
+		border: 0;
+		
+		h3 {
+			text-align: center;
+			color: $darkBgColor;
+		}
+	}
+	
+}
+
 #block-mystory {
 	#mystory-text {
 		padding: 5em;
-	}
-	
-	.equal {
-		padding: 15px;
-		
-		@media (min-width: 992px) {
-			display: flex;
-		}
-		.equal-panel {
-			display: flex;
-			align-items: stretch;
-			margin-bottom: 1em;
-			padding: 15px;
-		}
-		
-		.story-block {
-			background: $whiteColor;
-			width: 100%;
-			border: 0;
-			
-			.panel-heading {
-				background: $whiteColor;
-				border: 0;
-				
-				h3 {
-					text-align: center;
-					color: $darkBgColor;
-				}
-			}
-			
-		}
 	}
 	
 	.centered {
@@ -272,6 +258,41 @@ footer {
 }
 
 /* Resume */
+#photo-resume {
+	display: block;
+	margin: auto;
+	border-radius: 50%;
+}
+
+#info-resume {
+	display: block;
+	padding: 3em;
+}
+
+.equal {
+	padding: 15px;
+	
+	@media (min-width: 992px) {
+		display: flex;
+	}
+	.equal-panel {
+		display: flex;
+		align-items: stretch;
+		margin-bottom: 1em;
+		padding: 15px;
+		
+		.well {
+			width: 100%;
+			background: $whiteColor;
+		}
+	}
+
+}
+
+.block-views-blockresume-block-1 {
+	clear: both;
+}
+
 .view-id-resume {
 	background: $whiteColor;
 	margin: 15px;
@@ -281,10 +302,6 @@ footer {
 		width: 100%;
 		padding: 1em 2em;
 		border-bottom: solid 1px $lightBgColor;
-		
-		&:hover {
-			background: $lightBgColor;
-		}
 	}
 	
 	.views-field-field-year {
@@ -304,10 +321,14 @@ footer {
 		color: $logoColor;
 	}
 	
-	.views-field-field-enlace,
-	.views-field-field-image,
 	.views-field-body {
 		display: none;
+		background: $whiteColor;
+		padding: 1em;
+		
+		p, em, strong {
+			font-size: 0.8em;
+		}
 	}
 }
 
