@@ -36,9 +36,10 @@ $(document).ready(function() {
 	}
 	
 	// ** Resume **
-	if ($('.view-resume').length) {
+	// Workplaces block
+	if ($('#block-views-block-resume-block-1').length) {
 		
-		$('.row-resume').hover(
+		$('#block-views-block-resume-block-1 .row-resume').hover(
 			function() {
 				$($(this).children('div.views-field.views-field-body')).toggle('slow');
 			});
