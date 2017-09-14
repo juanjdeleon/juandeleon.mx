@@ -1,24 +1,24 @@
-uuid: 2a7b16cb-a367-4e45-ade8-22b8db3b891d
+uuid: 01c6295c-10a6-4551-9476-d3ebe8622493
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:aa11077d-d926-47fb-9a39-244c43ed462d'
+    - 'block_content:basic:f73586db-c271-4613-9cc5-d30c7aeb8647'
   module:
     - block_content
     - language
     - system
   theme:
     - robootstrap
-id: mihistoria
+id: musicheadertext
 theme: robootstrap
-region: header
-weight: -10
+region: content
+weight: -8
 provider: null
-plugin: 'block_content:aa11077d-d926-47fb-9a39-244c43ed462d'
+plugin: 'block_content:f73586db-c271-4613-9cc5-d30c7aeb8647'
 settings:
-  id: 'block_content:aa11077d-d926-47fb-9a39-244c43ed462d'
-  label: 'Mi Historia'
+  id: 'block_content:f73586db-c271-4613-9cc5-d30c7aeb8647'
+  label: 'Music - Header text'
   provider: block_content
   label_display: '0'
   status: true
@@ -28,12 +28,12 @@ visibility:
   language:
     id: language
     langcodes:
-      es: es
+      en: en
     negate: false
     context_mapping:
       language: '@language.current_language_context:language_interface'
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: /music
     negate: false
     context_mapping: {  }

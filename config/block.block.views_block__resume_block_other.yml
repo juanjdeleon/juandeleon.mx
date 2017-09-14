@@ -1,30 +1,30 @@
-uuid: 647b5521-264e-4bf8-9330-9fe83e23e10c
+uuid: 23647e06-a631-4ada-befa-5c5f97afff8a
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.list_of_projects
+    - views.view.resume
   module:
     - system
     - views
   theme:
     - robootstrap
-id: views_block__list_of_projects_block_2
+id: views_block__resume_block_other
 theme: robootstrap
 region: content
-weight: -6
+weight: -4
 provider: null
-plugin: 'views_block:list_of_projects-block_2'
+plugin: 'views_block:resume-block_2'
 settings:
-  id: 'views_block:list_of_projects-block_2'
+  id: 'views_block:resume-block_2'
   label: ''
   provider: views
-  label_display: '0'
+  label_display: visible
   views_label: ''
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: /code
+    pages: /resume
     negate: false
     context_mapping: {  }

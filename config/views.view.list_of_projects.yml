@@ -7,15 +7,15 @@ dependencies:
     - field.storage.node.field_enlace
     - field.storage.node.field_image
     - field.storage.node.field_synopsis
-    - responsive_image.styles.narrow
+    - image.style.medium
+    - node.type.project
     - taxonomy.vocabulary.type_of_project
   content:
     - 'taxonomy_term:type_of_project:ac5beab9-b5e9-4576-b795-cb2d0a7b0d21'
-    - 'taxonomy_term:type_of_project:c4386451-6dba-424b-8ec6-c6989d1df0e8'
   module:
+    - image
     - link
     - node
-    - responsive_image
     - taxonomy
     - text
     - user
@@ -106,7 +106,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: image
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -118,9 +118,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: responsive_image
+          type: image
           settings:
-            responsive_image_style: narrow
+            image_style: medium
             image_link: ''
           group_column: ''
           group_columns: {  }
@@ -209,7 +209,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<label>Watch more:</label> <a href="{{ field_enlace__uri }}"><i class="fa fa-external-link" aria-hidden="true"></i>  {{ field_enlace__title }}</a>'
+            text: '<a href="{{ field_enlace__uri }}" title="{{ field_enlace__title }}" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>  {{ field_enlace__title }}</a>'
             make_link: false
             path: ''
             absolute: false
@@ -364,7 +364,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: project-content
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -401,16 +401,16 @@ display:
           expose:
             operator: ''
           group: 1
-        field_type_target_id:
-          id: field_type_target_id
-          table: node__field_type
-          field: field_type_target_id
+        type:
+          id: type
+          table: node_field_data
+          field: type
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: in
           value:
-            2: 2
+            project: project
           group: 1
           exposed: false
           expose:
@@ -438,71 +438,13 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: type_of_project
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-      sorts:
-        field_year_value:
-          id: field_year_value
-          table: node__field_year
-          field: field_year_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-      title: ''
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_enlace'
-        - 'config:field.storage.node.field_image'
-        - 'config:field.storage.node.field_synopsis'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: 'Music projects'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      block_description: 'Music projects'
-      display_description: ''
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
           entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        field_type_target_id:
-          id: field_type_target_id
-          table: node__field_type
-          field: field_type_target_id
+          entity_field: type
+          plugin_id: bundle
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
           relationship: none
           group_type: group
           admin_label: ''
@@ -543,13 +485,67 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-      defaults:
-        filters: false
-        filter_groups: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
+      sorts:
+        field_year_value:
+          id: field_year_value
+          table: node__field_year
+          field: field_year_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      title: ''
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+      css_class: project-list
     cache_metadata:
       max-age: -1
       contexts:
@@ -563,14 +559,23 @@ display:
         - 'config:field.storage.node.field_enlace'
         - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_synopsis'
-  block_2:
-    display_plugin: block
-    id: block_2
-    display_title: 'Code projects'
-    position: 1
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: 'Music projects page'
+    position: 3
     display_options:
       display_extenders: {  }
-      block_description: 'Code projects'
+      path: music
+      menu:
+        type: none
+        title: Music
+        description: 'List of music projects'
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
       display_description: ''
     cache_metadata:
       max-age: -1
