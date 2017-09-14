@@ -67,12 +67,16 @@ h2 {
 	-webkit-transition: background 0.3s;
 
 	.menu {
-		float: right;
-
 		a {
 			font-family: $headerFont;
 			color: $logoColor !important;
 		}
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.navbar-nav {
+		float: right;
 	}
 }
 
@@ -124,6 +128,7 @@ footer {
 	a {
 		display: inline-block;
 		padding: 10px 15px 10px 40px;
+		margin: 0.5em;
 		text-align: center;
 		border: solid 1px $darkBgColor;
 	}
@@ -150,7 +155,7 @@ footer {
 		background: #fff;
 		position: fixed;
 	}
-
+	
 }
 
 #frontcover {
@@ -176,8 +181,8 @@ footer {
 	    border-color: $whiteColor;
 	    
 	    &:hover {
-		    color: white;
-		    border-color: white;
+		    color: $darkBgColor;
+		    background-color: white;
 	    }
     }
   }
@@ -201,23 +206,34 @@ footer {
 	
 }
 
-#block-mystory {
+#block-mystory,
+#block-mihistoria {
 	#mystory-text {
+		.isotipo {
+			display: block;
+		    margin: auto;
+		    max-width: 200px;
+		}
+		
 		padding: 5em;
 	}
 	
 	.centered {
 		text-align: center;
-		margin: 2em;
+		margin: 4em;
+	}
+	
+	.row {
+		margin-right: 0;
 	}
 }
 
 .view-frontpage {
 	.views-row {
 		display: inline-block;
-		padding: 15px;
+		padding: 45px;
 		
-		.views-field-field-image {
+		.front-blog-image {
 			padding: 1em;
 			
 			img {
@@ -225,7 +241,7 @@ footer {
 			}
 		}
 		
-		.views-field-title {
+		.front-blog-title {
 			clear: both;
 			text-align: center;
 			
@@ -236,8 +252,12 @@ footer {
 			}
 		}
 		
-		.views-field-path {
-			margin: 1em;
+		.front-blog-body {
+			padding: 1em;
+		}
+		
+		.front-blog-readmore {
+			margin: 2em;
 			text-align: center;
 			
 			a {
@@ -255,6 +275,13 @@ footer {
 	    display: inline-block;
 	    width: 100%;
 	}
+
+	@media (max-width: $tablet-width - 1) {
+		.views-row {
+			padding: 15px;
+		}
+	}
+
 }
 
 /* Resume */
@@ -283,7 +310,8 @@ footer {
 		
 		.well {
 			width: 100%;
-			background: $whiteColor;
+			background: $highlightColor;
+			padding-left: 3em;
 		}
 	}
 
@@ -295,7 +323,10 @@ footer {
 
 .view-id-resume {
 	background: $whiteColor;
-	margin: 15px;
+	
+	@media (min-width: $tablet-width) {
+		margin: 15px;
+	}
 	
 	.views-row {
 		display: inline-block;
@@ -340,11 +371,10 @@ footer {
 .view-display-id-block_2 {
 	.views-field-field-image {
 		float: left;
-		margin: 15px 30px 0 0;
+		margin: 15px 30px 15px 0;
 	}
 	
 	.views-field-body {
-		display: inline-block;
 		padding-bottom: 1em;
 		
 		p, em, strong {
@@ -367,48 +397,67 @@ footer {
 .path-blog {
 	margin-top: 65px !important;
 	padding: 15px;
+}
+
+.blog-entries,
+.term-articles {
+	padding: 15px;
 	
-	.view-blog {
-		padding: 15px;
+	.views-row {
+		display: inline-block;
+		clear: both;
+		padding-bottom: 2em;
+		
+		.article-image {
+			display: inline-block;
+			float: left;
+			padding: 0 4em 3em 0;
+		}
+		
+		.article-title a {
+			font-family: Roboto Slab;
+			font-size: 2em;
+			color: $logoColor;
+		}
+		
+		.article-date {
+			font-style: italic;
+			color: $highlightColor;
+			line-height: 3em;
+		}
+		
+		.article-body {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	
+	@media (max-width: $tablet-width - 1px) {
+		padding: 0;
 		
 		.views-row {
-			display: inline-block;
-			clear: both;
-			padding-bottom: 2em;
-			
-			.views-field-field-image {
-				display: inline-block;
-				float: left;
-				padding-right: 2em;
+			.article-image {
+				float: none;
+				padding-bottom: 1em;
 			}
 			
-			.views-field-title a {
-				font-family: Roboto Slab;
-				font-size: 2em;
-				color: $logoColor;
-			}
-			
-			.views-field-created {
-				font-style: italic;
-				color: $highlightColor;
-			}
-			
-			.views-field-body {
-				display: flex;
+			.article-body {
+				padding-bottom: 2em;
 			}
 		}
-		
-		.feed-icons {
-			text-align: center;
-			
-			.feed-icon {
-			    color: white;
-			    background: $logoColor;
-			    padding: 1em;
-			}
-		}
-		
 	}
+
+	
+	.feed-icons {
+		text-align: center;
+		
+		.feed-icon {
+		    color: white;
+		    background: $logoColor;
+		    padding: 1em;
+		}
+	}
+	
 }
 
 /* Since positioning the image, we need to help out the caption */
@@ -421,31 +470,32 @@ footer {
 #block-musicblockparallax,
 #block-codeblockparallax,
 #block-parallaxplaywithlinesofcode
- {
-  width: 100%;
-  height: 480px;
-  display: table;
-  position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  text-align: right;
-  
-  .field--name-body {
-    position: absolute;
-    right: 1em;
-    bottom: 1em;
-  }
-  
-  p {
-    background: black;
-    color: white;
-    font-family: $headerFont, sans-serif;
-    display: inline;
-    font-size: 3em;
-	  padding: 0.2em;
-  }
+{
+	width: 100%;
+	height: 480px;
+	display: table;
+	position: relative;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	text-align: right;
+
+	.field--name-body {
+		position: absolute;
+		right: 1em;
+		bottom: 1em;
+	}
+
+	p {
+		background: black;
+		color: white;
+		font-family: $headerFont, sans-serif;
+		display: inline;
+		font-size: 40px;
+		line-height: 65px;
+		padding: 0.2em;
+	}
 }
 
 #block-parallaxplaywithlinesofcode {
@@ -503,63 +553,81 @@ footer {
 }
 
 /* List of projects */
+#block-musicheadertext,
+#block-musictextodeencabezado {
+	padding: 15px;
+	padding: 2em 4em 4em 4em;
+}
+
 .view-id-list_of_projects {
-  max-width: 1400px;
-  margin-top: 2em;
+	max-width: 1400px;
+	margin-top: 2em;
 
-  h2 {
-    text-align: left;
-  }
+	h2 {
+		text-align: left;
+	}
 
-  .views-row {
-    display: flex;
-    padding: 1em;
+	.views-row {
+		h2 {
+			color: $logoColor;
+		}
 
-    &:nth-child(2n) {
-      background: #f0f0f0;
-    }
-    &:nth-child(2n-1) {
-      background: #dcdcdc;
-    }
+		display: flex;
+		padding: 1em;
+		background: $whiteColor;
+		border-bottom: solid 1px $lightBgColor;
 
-    .project-synopsis {
-      font-style: italic;
-      color: #808080;
-      padding-bottom: 1em;
-    }
+		.project-synopsis {
+			font-style: italic;
+			color: $logoColor;
+			padding-bottom: 1em;
+		}
 
-    .project-description {
-      font-size: 0.8em;
-      padding-bottom: 1em;
-    }
+		.project-description {
+			font-size: 0.8em;
+			padding-bottom: 1em;
+		}
 
-    .project-link {
-      font-size: 0.8em;
-      font-weight: 500;
-      float: right;
-    }
-  }
+		.project-link {
+			font-size: 0.8em;
+			font-weight: 500;
+			float: right;
+			a {
+				margin-left: 1em;
+				float: right;
+				color: $whiteColor;
+				background: $logoColor;
+				padding: 8px 12px;
+			}
+		}
+	}
 
-  .views-field-field-image {
-    min-width: 325px;
-    padding: 0 1em;
-    flex: 1;
-  }
+	.views-field-field-image {
+		min-width: 325px;
+		padding: 0 1em;
+	}
 
-  .views-field-body {
-    font-size: 0.8em;
-  }
+	.views-field-body {
+		display: inline-block;
+		font-size: 0.8em;
+	}
 }
 
 /* Get in touch */
 .path-contact  {
-  .region-content {
-    font-size: 1em;
+	.region-content {
+		font-size: 1em;
 
-    #edit-preview {
-      margin-left: 1em;
-    }
-  }
+		#edit-preview {
+			margin-left: 1em;
+		}
+		
+		.button--primary {
+			margin: auto;
+			background: $darkBgColor;
+			color: $whiteColor;
+		}
+	}
 }
 
 .social-networks {
@@ -567,6 +635,7 @@ footer {
 		font-size: 3em;
 	}
 	letter-spacing: 0.8em;
+	line-height: 3em;
 	margin: 1.5em;
 	text-align: center;
 }
@@ -584,7 +653,8 @@ footer {
 		height: 275px;
 		
 		p {
-			font-size: 2em;
+			font-size: 30px;
+			line-height: 46px;
 		}
 	}
 
