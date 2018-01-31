@@ -356,13 +356,16 @@ footer {
 
 // Workplaces block
 #block-views-block-resume-block-1 {
+	.views-field-field-synopsis {
+		font-style: italic;
+		color: $darkBgColor;
+	}
 	.views-field-body {
-		display: none;
 		background: $whiteColor;
 		padding: 1em 0;
 		
 		p, em, strong {
-			font-size: 0.8em;
+			font-size: 0.9em;
 		}
 	}
 }

@@ -35,16 +35,5 @@ $(document).ready(function() {
 		sr.reveal('.view-frontpage');
 	}
 	
-	// ** Resume **
-	// Workplaces block
-	if ($('#block-views-block-resume-block-1').length) {
-		
-		$('#block-views-block-resume-block-1 .row-resume').hover(
-			function() {
-				$($(this).children('div.views-field.views-field-body')).toggle('slow');
-			});
-		
-	}
-
 });
 })(jQuery);
